@@ -4,6 +4,7 @@ import os
 import aws_cdk as cdk
 
 from hello_cdk.hello_cdk_stack import HelloCdkStack
+from hello_cdk.my_rds_stack import MyRdsStack
 
 
 app = cdk.App()
@@ -24,5 +25,5 @@ HelloCdkStack(app, "HelloCdkStack",
 
     # For more information, see https://docs.aws.amazon.com/cdk/latest/guide/environments.html
     )
-
+my_rds_stack = MyRdsStack(app, "MyRdsStack")
 app.synth()
